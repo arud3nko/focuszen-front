@@ -53,7 +53,7 @@ const TaskForm: React.FC<ModalFormProps> = ({ open, onCancel, tasks, submitCallb
                             value: Statuses[key as keyof typeof Statuses],
                         }))} />
                 </Form.Item>
-                <Form.Item name="description" label="Description">
+                <Form.Item name="description" label="Description" rules={[{ required: true }]}>
                     <Input />
                 </Form.Item>
                 <Form.Item name="performer" label="Performer" rules={[{ required: true }]}>
